@@ -1,3 +1,20 @@
+logs
+
+temp
+tmp
+
+build
+
+bin
+
+.task
+
+#Root config file if exist
+.config.yaml
+.env
+.env.*
+!.env.sample
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -5,11 +22,24 @@
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binary, build with `go test -c`
 *.test
+!Dockerfile.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Project-local glide cache
+.glide/
+
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+
+# IDE config folder
+.idea
+.vscode
+.gitconfig
+
+.DS_Store
+
+.gitlab-pat
