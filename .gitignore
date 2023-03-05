@@ -43,3 +43,5 @@ vendor/
 .DS_Store
 
 .gitlab-pat
+
+translations/
