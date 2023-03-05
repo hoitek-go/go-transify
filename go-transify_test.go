@@ -21,7 +21,7 @@ func TestTransify(t *testing.T) {
 	}
 
 	// Get the message
-	message := bundle.T("asghar.reza")
+	message := bundle.T("test")
 
 	// Print the message
 	fmt.Println(message)

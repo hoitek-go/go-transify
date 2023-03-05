@@ -16,7 +16,7 @@ type File struct {
 func (f *File) LoadMessages() (types.Messages, error) {
 	log.Println("Loading translations for", f.Language.Name, "from file...")
 
-	//
+	// Declare variables
 	var (
 		translationDir = f.Language.TranslationDir
 		filename       = translationDir + "/" + f.Language.Name + ".json"
@@ -24,9 +24,9 @@ func (f *File) LoadMessages() (types.Messages, error) {
 
 	// Check if translation directory exists and create it if it doesn't
 	if _, err := os.Stat(translationDir); os.IsNotExist(err) {
-		_, err := os.Create(translationDir)
+		err := os.Mkdir(translationDir, os.ModePerm)
 		if err != nil {
-			return nil, fmt.Errorf("error creating translation dir: %w", err)
+			return nil, fmt.Errorf("error creating translation directory: %w", err)
 		}
 	}
 
