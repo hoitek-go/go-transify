@@ -23,6 +23,8 @@ func TestTransify(t *testing.T) {
 	// Get the message
 	message := bundle.T("test")
 
+	bundle.SetLanguage(language.English)
+
 	// Print the message
 	fmt.Println(message)
 }
